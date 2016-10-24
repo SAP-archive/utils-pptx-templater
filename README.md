@@ -1,2 +1,2 @@
-# pptxtemplator
-pptx templator module
+# pptxtemplater
+pptx templater module
