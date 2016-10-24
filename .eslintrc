@@ -1,0 +1,31 @@
+    {
+    "env": {
+        "mocha": true,
+        "node": true,
+        "es6": true
+    },
+    "rules": {
+        "no-var": 2,
+        "prefer-arrow-callback": 1,
+        "prefer-rest-params": 0,
+        "prefer-spread": 2,
+        "camelcase": 0,
+        "eol-last": 1,
+        "handle-callback-err": 1,
+        "new-cap": 0,
+        "no-extra-semi": 1,
+        "no-path-concat": 0,
+        "no-trailing-spaces": 2,
+        "no-undef": 1,
+        "no-underscore-dangle": 0,
+        "no-unused-expressions": 1,
+        "no-unused-vars": 1,
+        "no-use-before-define": [1, "nofunc"],
+        "quotes": [1, "single"],
+        "semi": 2,
+        "space-infix-ops": 1,
+        "strict": [1, "global"],
+        "valid-typeof": 1,
+        "indent": [2, 4]
+    }
+}
