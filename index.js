@@ -17,7 +17,7 @@ let PptxTemplaterModule = class PptxTemplaterModule {
         } else if (event === 'rendered') {
             return this.finished();
         }
-    };
+    }
 
     get() {
         return null;
