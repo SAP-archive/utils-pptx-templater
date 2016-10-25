@@ -2,7 +2,7 @@
 
 This module can be used only in combination with docxtemplater.
 
-The pptxTemplater modifies pptx template and provided data before docxtemplate generates the final version of the document.
+The pptxtemplater modifies powerpoint template and provided data before docxtemplater generates the final version of the document.
 
 ## Installation
 Use npm install to get the module
