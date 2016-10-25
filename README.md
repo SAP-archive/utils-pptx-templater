@@ -47,9 +47,9 @@ Otput
 For data
 ```
 {
-    DATA_TO_BRING_ON_MULTIPLE_SLIDES: [{
-        COUNTRY: "Germany",
-        REVENUE_PER_REGION: [{
+    "DATA_TO_BRING_ON_MULTIPLE_SLIDES": [{
+        "COUNTRY": "Germany",
+        "REVENUE_PER_REGION": [{
                 "Region": "Berlin",
                 "ZIP": "55014",
                 "Revenue": "€93896.94"
@@ -63,8 +63,8 @@ For data
                 "Revenue": "€51355.41"
             }]
         },{
-        COUNTRY: "Austria",
-        REVENUE_PER_REGION: [{
+        "COUNTRY": "Austria",
+        "REVENUE_PER_REGION": [{
                 "Region": "Bgl",
                 "ZIP": "8571",
                 "Revenue": "€77899.04"
