@@ -36,7 +36,15 @@ If there are no data for this tag, this slide will be deleted.
 
     {$data_to_bring_on_multiple_slides}
 
-E.g.:
+Here is an example:
+
+Template
+![Template sample](https://github.wdf.sap.corp/raw/rapid-release/pptxtemplater/master/img/sample_template.png)
+
+Otput
+![Output sample](https://github.wdf.sap.corp/raw/rapid-release/pptxtemplater/master/img/sample_output.png)
+
+For data
 ```
 {
     DATA_TO_BRING_ON_MULTIPLE_SLIDES: [{
