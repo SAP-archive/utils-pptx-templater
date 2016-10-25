@@ -34,7 +34,7 @@ If you have a slide which should be duplicated dynamicaly depending on providede
 
 If there are no data for this tag, this slide will be deleted.
 
-    {$data_to_bring_on_multiple_slides}
+    {$data_to_show_on_multiple_slides}
 
 Here is an example:
 
@@ -47,7 +47,7 @@ Otput
 For data
 ```
 {
-    "DATA_TO_BRING_ON_MULTIPLE_SLIDES": [{
+    "DATA_TO_SHOW_ON_MULTIPLE_SLIDES": [{
         "COUNTRY": "Germany",
         "REVENUE_PER_REGION": [{
                 "Region": "Berlin",
