@@ -136,7 +136,8 @@ PptxTemplater =
                     newContent += substring.slice(0, indexOfFirstTag);
                     substring = substring.slice(indexOfFirstTag);
                     newContent += newTagName;
-                    substring = substring.replace(tags[2], '');
+                    let oldStringToRemove = /([^{]*)}/g.exec(substring)[1]; // e.g. array;</a:t></a:r><a:r><a:rPr lang=\"en-US\" smtClean=\"0\"/><a:t>max_rows:</a:t></a:r><a:r><a:rPr lang=\"en-US\" smtClean=\"0\"/><a:t>15</a:t></a:r><a:r><a:rPr lang=\"en-US\" dirty=\"0\" smtClean=\"0\"/><a:t>}
+                    substring = substring.replace(oldStringToRemove, '');
                 }
                 hasOuterTag = tags[1] === '#' ? true : hasOuterTag;
             }
