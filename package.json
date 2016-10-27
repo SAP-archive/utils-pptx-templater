@@ -2,6 +2,10 @@
   "name": "pptxtemplater",
   "version": "1.0.0",
   "description": ".pptx generator Module for docxtemplater v1.0",
+  "contributors": [
+    "Anton Kharitonov <anton.kharitonov@sap.com>",
+    "Martina Dukadinova"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,6 +19,6 @@
     "template",
     "office"
   ],
-  "author": "Anton Kharitonov, Martina Dukadinova",
-  "license": "ISC"
+  "author": "SAP SE",
+  "license": "Apache-2.0"
 }
