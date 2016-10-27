@@ -1,5 +1,5 @@
 'use strict';
-let PptxTemplater = require('./pptxTemplater');
+let PptxTemplater = require('./src/pptxTemplater');
 
 let PptxTemplaterModule = class PptxTemplaterModule {
     constructor(options) {
