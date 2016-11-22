@@ -6,21 +6,27 @@ let PptxTemplaterModule = class PptxTemplaterModule {
         this.options = options | {};
         this.name = 'pptxTemplater';
     }
+
+    get() {
+        return null;
+    }
+
+    getPptxTemplater(zip, tags) {
+        return new PptxTemplater(zip, tags);
+    }
+
     handleEvent(event, eventData) {
         let gen, newTemplateSlides;
         if (event === 'rendering') {
             this.renderingFileName = eventData;
             gen = this.manager.getInstance('gen');
-            this.pptxTemplater = new PptxTemplater(gen.zip, gen.tags);
+            this.pptxTemplater = this.getPptxTemplater(gen.zip, gen.tags);
             newTemplateSlides = this.pptxTemplater.splitTemplateSlides();
-            return this.pptxTemplater.reAddFiles(newTemplateSlides);
+            this.pptxTemplater.reAddFiles(newTemplateSlides);
+            return gen.templatedFiles = gen.fileTypeConfig.getTemplatedFiles(gen.zip);
         } else if (event === 'rendered') {
             return this.finished();
         }
-    }
-
-    get() {
-        return null;
     }
 
     handle() {
