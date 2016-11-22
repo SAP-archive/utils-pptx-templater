@@ -106,7 +106,7 @@ PptxTemplater =
             let tagName = foundTag[1];
             let maxRows = foundTag[2] ? parseInt(foundTag[2]) : null;
             let data = this.tags[tagName];
-            if (maxRows) {
+            if (maxRows && data.length > maxRows) {
                 return this.splitTableData(data, maxRows);
             } else {
                 return [data];
