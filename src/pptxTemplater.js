@@ -212,9 +212,11 @@ PptxTemplater =
 
         splitTableData(data, maxRows) {
             let newData = [];
-            let dataCopy = data.concat();
-            newData.push(dataCopy.splice(0, 15));
-            newData.push(dataCopy.length > maxRows ? this.splitTableData(dataCopy, maxRows) : dataCopy);
+            if (data !== undefined) {
+                let dataCopy = data.concat();
+                newData.push(dataCopy.splice(0, 15));
+                newData.push(dataCopy.length > maxRows ? this.splitTableData(dataCopy, maxRows) : dataCopy);
+            }
             return newData;
         }
 
