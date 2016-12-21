@@ -106,6 +106,7 @@ PptxTemplater =
             let tagName = foundTag[1];
             let maxRows = foundTag[2] ? parseInt(foundTag[2]) : null;
             let data = this.tags[tagName];
+            if (!data) return [];
             if (maxRows && data.length > maxRows) {
                 return this.splitTableData(data, maxRows);
             } else {
@@ -130,14 +131,20 @@ PptxTemplater =
                 if (foundTagName === dataTag && tags[1] === '$') {
                     substring = substring.replace(/\{\$[^}]*?}/g, '');
                 } else if (!hasOuterTag) {
-                    let newTagName = dataTag + '_' + foundTagName + '_' + id;
-                    this.tags[newTagName] = data[foundTagName] || data;
+                    let newTagName = foundTagName;
+                    if (id && data){
+                        newTagName = dataTag + '_' + foundTagName + '_' + id;
+                        this.tags[newTagName] = data[foundTagName] || data;
+                    }
 
                     newContent += substring.slice(0, indexOfFirstTag);
                     substring = substring.slice(indexOfFirstTag);
                     newContent += newTagName;
                     let oldStringToRemove = /([^{]*)}/g.exec(substring)[1]; // e.g. array;</a:t></a:r><a:r><a:rPr lang=\"en-US\" smtClean=\"0\"/><a:t>max_rows:</a:t></a:r><a:r><a:rPr lang=\"en-US\" smtClean=\"0\"/><a:t>15</a:t></a:r><a:r><a:rPr lang=\"en-US\" dirty=\"0\" smtClean=\"0\"/><a:t>}
                     substring = substring.replace(oldStringToRemove, '');
+                } else {
+                    newContent += substring.slice(0, indexOfFirstTag + foundTagName.length);
+                    substring = substring.slice(indexOfFirstTag + foundTagName.length);
                 }
                 hasOuterTag = tags[1] === '#' ? true : hasOuterTag;
             }
@@ -197,9 +204,13 @@ PptxTemplater =
                     newTemplateSlides.splice(slideNr - 1, 1);
                     this.removeSlide(slideNr);
                     return newTemplateSlides;
+                } else if (dataForTag.length < 1) {
+                    let newSlideContent = self.manipulateTags(content, null, tagName);
+                    newTemplateSlides = self.collectSlides(newSlideContent, slideNr, newTemplateSlides);
                 } else if (dataForTag && !Array.isArray(dataForTag)) {
                     throw new Error('Data for tag ' + tagName + ' must be an array!');
                 }
+
                 dataForTag.forEach((object, index) => {
                     let newSlideContent = self.manipulateTags(content, index, tagName, object);
                     newTemplateSlides = self.collectSlides(newSlideContent, slideNr, newTemplateSlides, index);
