@@ -54,6 +54,13 @@ PptxTemplater =
             return allSlides;
         }
 
+        compareSlides(a,b) {
+            if (a.originalIndex <= b.originalIndex) {
+                return -1;
+            }
+            return 1;
+        }
+
         findTags(regex, content) {
             let contentWithoutXMLTags = content.replace(/<.*?>/g, '');
             return regex.exec(contentWithoutXMLTags);
@@ -132,7 +139,7 @@ PptxTemplater =
                     substring = substring.replace(/\{\$[^}]*?}/g, '');
                 } else if (!hasOuterTag) {
                     let newTagName = foundTagName;
-                    if (id && data){
+                    if (data){
                         newTagName = dataTag + '_' + foundTagName + '_' + id;
                         this.tags[newTagName] = data[foundTagName] || data;
                     }
@@ -221,12 +228,12 @@ PptxTemplater =
             return newTemplateSlides;
         }
 
-        splitTableData(data, maxRows) {
-            let newData = [];
+        splitTableData(data, maxRows, newData) {
+            newData = newData ? newData : [];
             if (data !== undefined) {
                 let dataCopy = data.concat();
-                newData.push(dataCopy.splice(0, 15));
-                newData.push(dataCopy.length > maxRows ? this.splitTableData(dataCopy, maxRows) : dataCopy);
+                newData.push(dataCopy.splice(0, maxRows));
+                dataCopy.length > maxRows ? this.splitTableData(dataCopy, maxRows, newData) : newData.push(dataCopy);
             }
             return newData;
         }
@@ -244,6 +251,7 @@ PptxTemplater =
             newTemplateSlides.forEach((slide) => {
                 allTemplateSlides = this.splitBy('maxRows', slide.originalIndex, slide.content, allTemplateSlides);
             });
+            allTemplateSlides = allTemplateSlides.sort(this.compareSlides);
             return allTemplateSlides;
         }
 
