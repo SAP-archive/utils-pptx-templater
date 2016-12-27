@@ -46,19 +46,9 @@ PptxTemplater =
 
         collectSlides(content, slideIndex, allSlides, additionalSlideIndex) {
             let originalSlideIndex = slideIndex;
-            if (allSlides[slideIndex]) {
-                slideIndex = additionalSlideIndex ? parseInt(slideIndex) + additionalSlideIndex : parseInt(slideIndex) + 1;
-            }
+            slideIndex = allSlides.length + 1;
             this.addSlideWithIndex(content, allSlides, slideIndex, originalSlideIndex);
-
             return allSlides;
-        }
-
-        compareSlides(a,b) {
-            if (a.originalIndex <= b.originalIndex) {
-                return -1;
-            }
-            return 1;
         }
 
         findTags(regex, content) {
@@ -251,7 +241,6 @@ PptxTemplater =
             newTemplateSlides.forEach((slide) => {
                 allTemplateSlides = this.splitBy('maxRows', slide.originalIndex, slide.content, allTemplateSlides);
             });
-            allTemplateSlides = allTemplateSlides.sort(this.compareSlides);
             return allTemplateSlides;
         }
 
