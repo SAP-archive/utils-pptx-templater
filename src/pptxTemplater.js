@@ -143,6 +143,9 @@ PptxTemplater =
                     newContent += substring.slice(0, indexOfFirstTag + foundTagName.length);
                     substring = substring.slice(indexOfFirstTag + foundTagName.length);
                 }
+                if (foundTagName === dataTag && tags[1] === '/') {
+                    break;
+                }
                 hasOuterTag = tags[1] === '#' ? true : hasOuterTag;
             }
             newContent += substring;
