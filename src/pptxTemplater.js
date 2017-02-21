@@ -200,7 +200,7 @@ PptxTemplater =
             if (splitterTag) {
                 let tagName = splitterTag[1];
                 let dataForTag = type === 'multiplier' ? this.tags[tagName] : this.getTableData(splitterTag);
-                if (!dataForTag && type === 'multiplier') {
+                if ((!dataForTag || dataForTag.length === 0) && type === 'multiplier') {
                     newTemplateSlides.splice(slideNr - 1, 1);
                     this.removeSlide(slideNr);
                     return newTemplateSlides;
