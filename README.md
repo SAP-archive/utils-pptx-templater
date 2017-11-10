@@ -1,10 +1,12 @@
 # pptxTemplater
 
-This module can be used only in combination with docxtemplater.
-
 The pptxtemplater modifies powerpoint template and provided data before docxtemplater generates the final version of the document.
 
-## Installation
+This module can be used only in combination with [docxtemplater](https://github.com/open-xml-templating/docxtemplater).
+
+
+Installation
+===
 Use npm install to get the module
 ```
 npm install docxtemplater --save
@@ -19,8 +21,8 @@ doc.attachModule(pptxTemplaterModule);
 ```
 
 
-## Usage
-
+Usage
+===
 There are two new features added to the standard functionality of docxtemplater:
 
 ### Splitt PowerPoint table slides
@@ -39,10 +41,10 @@ If there are no data for this tag, this slide will be deleted.
 Here is an example:
 
 Template
-![Template sample](https://github.wdf.sap.corp/raw/rapid-release/pptxtemplater/master/img/sample_template.png)
+![Template sample](https://github.com/raw/sap/pptxtemplater/master/img/sample_template.png)
 
 Otput
-![Output sample](https://github.wdf.sap.corp/raw/rapid-release/pptxtemplater/master/img/sample_output.png)
+![Output sample](https://github.com/raw/sap/pptxtemplater/master/img/sample_output.png)
 
 For data
 ```
@@ -84,10 +86,11 @@ For data
 }
 ```
 
-Credits
-=======
+Contributions
+===
+Contributions are greatly appreciated. See [CONTRIBUTING](https://github.com/SAP/pptxtemplater/blob/master/CONTRIBUTING.md) for details
 
-<p align="center">
-![SAP](https://raw.githubusercontent.com/reviewninja/review.ninja/master/sap_logo.png)
-<p align="center">
-:heart: from the GitHub team @ SAP
+License
+===
+This project is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE](https://github.com/SAP/pptxtemplater/blob/master/LICENSE.md) file
+
