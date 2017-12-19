@@ -41,10 +41,10 @@ If there are no data for this tag, this slide will be deleted.
 Here is an example:
 
 Template
-![Template sample](https://github.com/raw/sap/pptxtemplater/master/img/sample_template.png)
+![Template sample](https://github.com/raw/sap/utils-pptx-templater/master/img/sample_template.png)
 
 Otput
-![Output sample](https://github.com/raw/sap/pptxtemplater/master/img/sample_output.png)
+![Output sample](https://github.com/raw/sap/utils-pptx-templater/master/img/sample_output.png)
 
 For data
 ```
@@ -88,9 +88,9 @@ For data
 
 Contributions
 ===
-Contributions are greatly appreciated. See [CONTRIBUTING](https://github.com/SAP/pptxtemplater/blob/master/CONTRIBUTING.md) for details
+Contributions are greatly appreciated. See [CONTRIBUTING](https://github.com/SAP/utils-pptx-templater/blob/master/CONTRIBUTING.md) for details
 
 License
 ===
-This project is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE](https://github.com/SAP/pptxtemplater/blob/master/LICENSE.md) file
+This project is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE](https://github.com/SAP/utils-pptx-templater/blob/master/LICENSE.md) file
 
