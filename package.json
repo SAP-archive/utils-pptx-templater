@@ -1,35 +1,35 @@
 {
-  "name": "pptxtemplater",
-  "version": "1.0.1",
-  "description": ".pptx generator Module for docxtemplater v1.0",
-  "contributors": [
-    "Anton Kharitonov <anton.kharitonov@sap.com>",
-    "Martina Dukadinova"
-  ],
-  "main": "index.js",
-  "scripts": {
-    "test": "gulp test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.wdf.sap.corp:rapid-release/pptxtemplater.git"
-  },
-  "keywords": [
-    "pptx",
-    "template",
-    "office"
-  ],
-  "author": "SAP SE",
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "assert": "^1.4.1",
-    "docxtemplater": "^2.1.5",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
-    "gulp-istanbul": "^1.1.1",
-    "gulp-mocha": "^3.0.1",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.1.2",
-    "sinon": "^1.17.6"
-  }
+    "name": "pptxtemplater",
+    "version": "1.0.1",
+    "description": ".pptx generator Module for docxtemplater v1.0",
+    "contributors": [
+        "Anton Kharitonov <anton.kharitonov@sap.com>",
+        "Martina Dukadinova <marti4ka@gmail.com>"
+    ],
+    "main": "index.js",
+    "scripts": {
+        "test": "gulp test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.wdf.sap.corp:rapid-release/pptxtemplater.git"
+    },
+    "keywords": [
+        "pptx",
+        "template",
+        "office"
+    ],
+    "author": "SAP SE",
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "assert": "^1.4.1",
+        "docxtemplater": "^2.1.5",
+        "gulp": "^3.9.1",
+        "gulp-eslint": "^3.0.1",
+        "gulp-istanbul": "^1.1.1",
+        "gulp-mocha": "^3.0.1",
+        "istanbul": "^0.4.5",
+        "mocha": "^3.1.2",
+        "sinon": "^1.17.6"
+    }
 }
