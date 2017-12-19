@@ -41,10 +41,10 @@ If there are no data for this tag, this slide will be deleted.
 Here is an example:
 
 Template
-![Template sample](https://github.com/raw/sap/utils-pptx-templater/master/img/sample_template.png)
+![Template sample](https://github.com/sap/utils-pptx-templater/blob/master/img/sample_template.png)
 
 Otput
-![Output sample](https://github.com/raw/sap/utils-pptx-templater/master/img/sample_output.png)
+![Output sample](https://github.com/sap/utils-pptx-templater/blob/master/img/sample_output.png)
 
 For data
 ```
