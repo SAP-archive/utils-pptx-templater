@@ -2,7 +2,7 @@
 
 The pptxtemplater modifies powerpoint template and provided data before docxtemplater generates the final version of the document.
 
-This module can be used only in combination with [docxtemplater](https://github.com/open-xml-templating/docxtemplater).
+This module can be used only in combination with [docxtemplater][docxtemplater].
 
 
 Installation
@@ -20,6 +20,10 @@ let doc = new this.Docxtemplater(content);
 doc.attachModule(pptxTemplaterModule);
 ```
 
+Requirements
+===
+ * nodejs - v6.0 and heigher
+ * [docxtemplater][docxtemplater]
 
 Usage
 ===
@@ -41,10 +45,10 @@ If there are no data for this tag, this slide will be deleted.
 Here is an example:
 
 Template
-![Template sample](https://github.com/sap/utils-pptx-templater/blob/master/img/sample_template.png)
+![Template sample][pptx-templater-template]
 
 Otput
-![Output sample](https://github.com/sap/utils-pptx-templater/blob/master/img/sample_output.png)
+![Output sample][pptx-templater-output]
 
 For data
 ```
@@ -88,9 +92,23 @@ For data
 
 Contributions
 ===
-Contributions are greatly appreciated. See [CONTRIBUTING](https://github.com/SAP/utils-pptx-templater/blob/master/CONTRIBUTING.md) for details
+Contributions are greatly appreciated. See [CONTRIBUTING][pptx-templater-contribution] for details
+
+
+How to obtain support
+===
+Feel free to open new issues for feature requests, bugs or general feedback on
+the [GitHub issues page of this project][pptx-templater-issues].
 
 License
 ===
-This project is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE](https://github.com/SAP/utils-pptx-templater/blob/master/LICENSE.md) file
+This project is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE][pptx-templater-license] file
+
+[docxtemplater]:https://github.com/open-xml-templating/docxtemplater
+[pptx-templater-template]: https://github.com/sap/utils-pptx-templater/blob/master/img/sample_template.png
+[pptx-templater-output]: https://github.com/sap/utils-pptx-templater/blob/master/img/sample_output.png
+[pptx-templater-license]: https://github.com/SAP/utils-pptx-templater/blob/master/LICENSE.md
+[pptx-templater-contribution]: https://github.com/SAP/utils-pptx-templater/blob/master/CONTRIBUTING.md
+[pptx-templater-issues]: https://github.com/SAP/utils-pptx-templater/issues
+
 
