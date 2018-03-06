@@ -22,8 +22,8 @@ doc.attachModule(pptxTemplaterModule);
 
 Requirements
 ===
- * nodejs - v6.0 and heigher
- * [docxtemplater][docxtemplater]
+ * nodejs - v6.0 and higher
+ * [docxtemplater][docxtemplater] - v2.1
 
 Usage
 ===
@@ -47,7 +47,7 @@ Here is an example:
 Template
 ![Template sample][pptx-templater-template]
 
-Otput
+Output
 ![Output sample][pptx-templater-output]
 
 For data
