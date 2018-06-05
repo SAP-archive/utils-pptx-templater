@@ -179,9 +179,7 @@ PptxTemplater =
             let slideRelsPath = 'ppt/slides/_rels/slide' + slideNr + '.xml.rels';
             let notesSlideRelsPath = 'ppt/notesSlides/_rels/notesSlide' + slideNr + '.xml.rels';
             delete this.zip.files[slidePath];
-            delete this.zip.files[notesSlidePath];
             delete this.zip.files[slideRelsPath];
-            delete this.zip.files[notesSlideRelsPath];
         }
 
         replaceOldRel(relsContent, id, rel) {
