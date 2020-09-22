@@ -23,7 +23,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      echo Write your commands here
+      echo "//registry.npmjs.org/:_authToken=$AUTH_TOKEN" > ~/.npmrc 
       
-      echo Hello world
+      npm whoami
   displayName: 'publish'
