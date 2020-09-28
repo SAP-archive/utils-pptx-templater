@@ -1,6 +1,6 @@
 {
     "name": "pptxtemplater",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": ".pptx generator Module for docxtemplater v1.0",
     "contributors": [
         "Anton Kharitonov <anton.kharitonov@sap.com>",
