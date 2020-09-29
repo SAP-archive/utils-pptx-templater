@@ -20,7 +20,7 @@ steps:
     npm run test
   displayName: 'npm install and test'
   
-  script: |
+- script: |
     RESP="$(curl \
     -H 'X-Vault-Token: '$(vault_token) \
     -H 'X-Vault-Namespace: ies/test' \
