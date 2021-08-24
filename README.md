@@ -1,5 +1,7 @@
 # pptxTemplater
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/utils-pptx-templater)](https://api.reuse.software/info/github.com/SAP/utils-pptx-templater)
+
 The pptxtemplater modifies PowerPoint template and provided data before docxtemplater generates the final version of the document.
 
 This module can be used only in combination with [docxtemplater][docxtemplater].
@@ -102,7 +104,7 @@ the [GitHub issues page of this project][pptx-templater-issues].
 
 License
 ===
-This project is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE][pptx-templater-license] file
+Copyright 2016-2021 SAP SE or an SAP affiliate company and utils-pptx-templater contributors. Please see our [LICENSE][pptx-templater-license] for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool][pptx-templater-reuse-tool].
 
 [docxtemplater]:https://github.com/open-xml-templating/docxtemplater
 [pptx-templater-template]: https://github.com/sap/utils-pptx-templater/blob/master/img/sample_template.png
@@ -110,5 +112,4 @@ This project is licensed under the Apache Software License, v. 2 except as noted
 [pptx-templater-license]: https://github.com/SAP/utils-pptx-templater/blob/master/LICENSE.md
 [pptx-templater-contribution]: https://github.com/SAP/utils-pptx-templater/blob/master/CONTRIBUTING.md
 [pptx-templater-issues]: https://github.com/SAP/utils-pptx-templater/issues
-
-
+[pptx-templater-reuse-tool]: https://api.reuse.software/info/github.com/SAP/utils-pptx-templater
